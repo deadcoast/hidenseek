@@ -30,8 +30,6 @@ Welcome to **Hide N’ Seek (HNS)** – an all-in-one, cross-platform CLI toolki
   - [**Contributing**](#contributing)
   - [**License**](#license)
 
----
-
 ## **Key Features**
 
 | **Module**         | **Highlights**                                                                                                                           |
