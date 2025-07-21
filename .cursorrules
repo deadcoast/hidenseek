@@ -1,0 +1,209 @@
+{
+    "general": {
+        "coding_style": {
+            "language": "Python",
+            "use_strict": true,
+            "indentation": "4 spaces",
+            "max_line_length": 100,
+            "comments": {
+                "style": "# for single-line, ''' for module/class/function docstrings",
+                "require_comments": true,
+                "comment_scope": "All public methods, classes, UI logic, and non-trivial blocks"
+            },
+            "inline_typing": true,
+            "require_type_hints": true
+        },
+        "naming_conventions": {
+            "variables": "snake_case",
+            "functions": "snake_case",
+            "classes": "PascalCase",
+            "files": "snake_case",
+            "widgets": "PascalCase with suffix 'Widget'",
+            "messages": "PascalCase with suffix 'Message'"
+        },
+        "error_handling": {
+            "prefer_try_catch": true,
+            "log_errors": true,
+            "avoid_bare_except": true,
+            "handle_ui_exceptions": true,
+            "wrap_textual_calls": true
+        },
+        "testing": {
+            "require_tests": true,
+            "test_coverage": "90%",
+            "test_types": [
+                "unit",
+                "integration",
+                "render"
+            ],
+            "test_textual_components": true,
+            "mock_event_loop": true
+        },
+        "documentation": {
+            "require_docs": true,
+            "doc_tool": "docstrings",
+            "style_guide": "Google Python Style Guide",
+            "public_api_docs": true,
+            "annotate_reactive_fields": true,
+            "document_widget_lifecycle": true
+        },
+        "security": {
+            "sanitize_inputs": true,
+            "validate_inputs": true,
+            "use_env_vars": true
+        },
+        "configuration_management": {
+            "config_files": [
+                ".env",
+                "textual.toml"
+            ],
+            "env_management": "python-dotenv",
+            "secrets_management": "environment variables"
+        },
+        "code_review": {
+            "require_reviews": true,
+            "review_tool": "GitHub Pull Requests",
+            "review_criteria": [
+                "functionality",
+                "code quality",
+                "accessibility",
+                "style conformity"
+            ]
+        },
+        "version_control": {
+            "system": "Git",
+            "branching_strategy": "GitHub Flow",
+            "commit_message_format": "Conventional Commits"
+        },
+        "logging": {
+            "logging_tool": "Python logging module",
+            "log_levels": [
+                "debug",
+                "info",
+                "warn",
+                "error"
+            ],
+            "log_retention_policy": "7 days",
+            "use_structured_logs": true
+        },
+        "monitoring": {
+            "monitoring_tool": "Not applicable for local TUIs",
+            "metrics": [
+                "widget mount time",
+                "event loop ticks",
+                "render FPS"
+            ]
+        },
+        "dependency_management": {
+            "package_manager": "pip",
+            "versioning_strategy": "Semantic Versioning",
+            "lockfile": "requirements.txt or poetry.lock"
+        },
+        "accessibility": {
+            "standards": [
+                "Textual keyboard navigation"
+            ],
+            "testing_tools": [
+                "manual and tab-key simulation"
+            ]
+        },
+        "internationalization": {
+            "i18n_tool": "Not applicable",
+            "supported_languages": [
+                "English"
+            ],
+            "default_language": "English"
+        },
+        "ci_cd": {
+            "ci_tool": "GitHub Actions",
+            "cd_tool": "Not specified",
+            "pipeline_configuration": ".github/workflows/main.yml"
+        },
+        "code_formatting": {
+            "formatter": "Black",
+            "linting_tool": "Pylint",
+            "rules": [
+                "PEP 8",
+                "Textual-specific rules"
+            ],
+            "autofix": true
+        },
+        "architecture": {
+            "patterns": [
+                "Modular design",
+                "Component-based UI",
+                "Event-driven"
+            ],
+            "principles": [
+                "Single Responsibility",
+                "DRY",
+                "Reactive Design"
+            ]
+        }
+    },
+    "project_specific": {
+        "use_framework": "Textual",
+        "styling": "CSS-like using .css files",
+        "testing_framework": "pytest",
+        "build_tool": "setuptools",
+        "deployment": {
+            "environment": "Local terminal and web preview",
+            "automation": "Not specified",
+            "strategy": "Manual for CLI, Web preview via Textual Cloud (optional)"
+        },
+        "performance": {
+            "benchmarking_tool": "internal metrics + profiling hooks",
+            "performance_goals": {
+                "render_cycle": "< 16ms",
+                "widget_mount": "< 200ms",
+                "event_latency": "< 50ms"
+            }
+        }
+    },
+    "context": {
+        "codebase_overview": "Python Textual-based TUI for a Modular CLI Toolbox",
+        "libraries": [
+            "textual",
+            "rich",
+            "watchdog",
+            "spacy",
+            "PyPDF2",
+            "python-docx",
+            "pandas",
+            "beautifulsoup4",
+            "transformers",
+            "scikit-learn",
+            "joblib",
+            "python-dotenv",
+            "torch",
+            "pytest",
+            "pytest-mock"
+        ],
+        "coding_practices": {
+            "modularity": true,
+            "DRY_principle": true,
+            "performance_optimization": true,
+            "reactive_design": true,
+            "widget_lifecycle_awareness": true
+        },
+        "textual": {
+            "widget_guidelines": "Use `on_mount`, `compose`, `watch`, and `Reactive` patterns",
+            "message_passing": "Use Message classes with proper bubbling",
+            "style_management": "Extract styles to .css files and follow Textual theming patterns",
+            "screen_architecture": "Keep each screen self-contained and avoid side effects",
+            "event_hooks": "Use Textual's `on_*` event naming conventions"
+        }
+    },
+    "behavior": {
+        "verbosity": {
+            "level": 2,
+            "range": [
+                0,
+                3
+            ]
+        },
+        "handle_incomplete_tasks": "Provide partial solution and explain limitations",
+        "ask_for_clarification": true,
+        "communication_tone": "Professional and concise"
+    }
+}

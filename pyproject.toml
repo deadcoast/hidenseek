@@ -1,0 +1,91 @@
+# pyproject.toml
+# ---------------
+# Build & packaging definition for Hide N’ Seek Directory Manager
+
+[build-system]
+requires = ["setuptools>=69.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# --------------------------------------------------------------------------- #
+# Project metadata
+# --------------------------------------------------------------------------- #
+[project]
+name = "hide-n-seek"
+version = "0.1.0"
+description = "Hide N’ Seek Directory Manager – interactive CLI to hide/reveal folders."
+readme = "README.md"
+requires-python = ">=3.8"
+
+license = { text = "MIT" }
+
+authors = [{ name = "Ryan Forrestall", email = "you@example.com" }]
+
+keywords = [
+    "cli",
+    "filesystem",
+    "hide",
+    "seek",
+    "chflags",
+    "attrib",
+    "dotfiles",
+    "rich",
+    "typer",
+]
+
+classifiers = [
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Topic :: System :: Filesystems",
+    "Topic :: Utilities",
+]
+
+# --------------------------------------------------------------------------- #
+# Runtime dependencies
+# --------------------------------------------------------------------------- #
+dependencies = [
+    "typer[all]>=0.12.3", # click-based CLI framework with prompt toolkit extras
+    "rich>=13.7.1",       # colourful console rendering
+]
+
+# --------------------------------------------------------------------------- #
+# Optional extras – development & test tooling
+# --------------------------------------------------------------------------- #
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "pytest-cov>=5.0",
+    "ruff>=0.4",       # lightning-fast linter / formatter
+    "black>=24.4.2",
+]
+
+# --------------------------------------------------------------------------- #
+# Console entry-point
+# --------------------------------------------------------------------------- #
+[project.scripts]
+hns = "hns.cli:run"
+
+# --------------------------------------------------------------------------- #
+# Setuptools configuration tweaks
+# --------------------------------------------------------------------------- #
+[tool.setuptools]
+package-dir = { "" = "src" } # project code lives in ./src/hns
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+# --------------------------------------------------------------------------- #
+# Ruff (lint) & Black (format) config snippets                           (opt)
+# --------------------------------------------------------------------------- #
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.black]
+target-version = ["py310"]
+line-length = 100

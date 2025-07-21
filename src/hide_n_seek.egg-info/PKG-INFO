@@ -1,0 +1,25 @@
+Metadata-Version: 2.4
+Name: hide-n-seek
+Version: 0.1.0
+Summary: Hide N’ Seek Directory Manager – interactive CLI to hide/reveal folders.
+Author-email: Ryan Forrestall <you@example.com>
+License: MIT
+Keywords: cli,filesystem,hide,seek,chflags,attrib,dotfiles,rich,typer
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: typer[all]>=0.12.3
+Requires-Dist: rich>=13.7.1
+Provides-Extra: dev
+Requires-Dist: pytest>=8.2; extra == "dev"
+Requires-Dist: pytest-cov>=5.0; extra == "dev"
+Requires-Dist: ruff>=0.4; extra == "dev"
+Requires-Dist: black>=24.4.2; extra == "dev"
